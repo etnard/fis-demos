@@ -46,6 +46,7 @@
     "lucide-react": "^0.555.0",
     "next": "^16.1.6",
     "next-router-mock": "^1.0.4",
+    "npm": "^11.10.0",
     "openai": "^6.10.0",
     "pg": "^8.16.3",
     "react": "19.2.1",
@@ -86,6 +87,6 @@
     "vitest": "^4.0.15"
   },
   "overrides": {
-  "minimatch": "^10.1.2"
+    "minimatch": "^10.1.2"
   }
 }
