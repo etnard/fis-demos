@@ -6,4 +6,5 @@ export const ROUTES = {
   lessonPlan: "/lesson-planner",
   learnerProfiles: "/learner-profiles",
   account: "/account",
+  lessons: "/lessons",
 };

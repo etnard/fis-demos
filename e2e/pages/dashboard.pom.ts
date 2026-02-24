@@ -21,6 +21,10 @@ export class DashboardPage {
   readonly lessonPlanCardButton: Locator;
   readonly lessonPlanContentDescription: Locator;
 
+  // Lessons Card Elements
+  readonly lessonsCardButton: Locator;
+  readonly lessonsCardDescription: Locator;
+
   constructor(readonly page: Page) {
     // Page Hero Elements
     this.heading = page.getByRole("heading", {
@@ -61,6 +65,12 @@ export class DashboardPage {
     this.lessonPlanContentDescription = page.getByText(
       /Plan your lessons perfectly based around/i,
     );
+
+    // Lessons Card Elements
+    this.lessonsCardButton = page
+      .getByRole("button", { name: "View Demo" })
+      .nth(4);
+    this.lessonsCardDescription = page.getByText(/View created Lessons/i);
   }
 
   public async visitQuizGeneratorDemo(): Promise<void> {
@@ -77,5 +87,9 @@ export class DashboardPage {
 
   public async visitLessonPlanDemo(): Promise<void> {
     return await this.lessonPlanCardButton.click();
+  }
+
+  public async visitLessonsDemo(): Promise<void> {
+    return await this.lessonsCardButton.click();
   }
 }

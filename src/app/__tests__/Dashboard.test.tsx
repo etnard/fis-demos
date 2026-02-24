@@ -22,8 +22,8 @@ describe("Home Page Content (Integration Test)", () => {
 
     const demoCards = screen.getAllByTestId("demo-card");
     const demoButtons = screen.getAllByTestId("demo-card-button");
-    expect(demoCards).toHaveLength(4);
-    expect(demoButtons).toHaveLength(4);
+    expect(demoCards).toHaveLength(5);
+    expect(demoButtons).toHaveLength(5);
 
     demoCards.forEach((card) => expect(card).toBeInTheDocument());
     demoButtons.forEach((button) => expect(button).toBeInTheDocument());

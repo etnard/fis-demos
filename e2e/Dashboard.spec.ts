@@ -11,7 +11,7 @@ test("1. Renders the main Adaptive Learning headline and intro text", async ({
   await expect(dashboardPage.introText).toBeVisible();
 });
 
-test("2. Renders all four Demo Cards with correct titles and links", async ({
+test("2. Renders all five Demo Cards with correct titles and links", async ({
   page,
   dashboardPage,
 }) => {
@@ -20,6 +20,7 @@ test("2. Renders all four Demo Cards with correct titles and links", async ({
   await expect(dashboardPage.courseOutlineCardButton).toBeVisible();
   await expect(dashboardPage.personalizedContentCardButton).toBeVisible();
   await expect(dashboardPage.lessonPlanCardButton).toBeVisible();
+  await expect(dashboardPage.lessonsCardButton).toBeVisible();
 
   // Test 2: Verify the Quiz Generator card is linked correctly and has the description
   const quizCardButton = dashboardPage.quizGeneratorCardButton;

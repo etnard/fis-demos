@@ -14,6 +14,7 @@ import { CourseOutlineCreatePage } from "./pages/demos/course-outline/courseOutl
 import { LessonPlanPage } from "./pages/demos/lesson-plan/lessonPlan.pom";
 import { LessonPlanCreatePage } from "./pages/demos/lesson-plan/lessonPlanCreate.pom";
 import { QuizCreatePage } from "./pages/demos/quiz-generator/quizCreate.pom";
+import { LessonsListPage } from "./pages/demos/lessons/lessonsList.pom";
 
 type CustomFixtures = {
   // Dashboard
@@ -39,6 +40,9 @@ type CustomFixtures = {
   // Quiz Generator
   quizListPage: QuizListPage;
   quizCreatePage: QuizCreatePage;
+
+  // Lessons
+  lessonsListPage: LessonsListPage;
 };
 
 // 📝 Define the global setup here
@@ -102,6 +106,12 @@ export const test = base.extend<CustomFixtures>({
   quizCreatePage: async ({ page }, use) => {
     const quizCreatePage = new QuizCreatePage(page);
     await use(quizCreatePage);
+  },
+
+  // Lessons
+  lessonsListPage: async ({ page }, use) => {
+    const lessonsListPage = new LessonsListPage(page);
+    await use(lessonsListPage);
   },
 
   // Global/Default Page Setup
